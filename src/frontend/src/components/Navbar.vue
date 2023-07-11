@@ -1,17 +1,17 @@
 <template>
   <header>
-    <a href="#" class="logo"><img src="assets/images/jeep.png" /></a>
+    <a href="/" class="logo"><img src="assets/images/jeep.png" /></a>
     <div class="bx bx-menu" id="menu-icon"></div>
 
     <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#ride">Ride</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="/#home">Home</a></li>
+      <li><a href="/#ride">Ride</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#reviews">Reviews</a></li>
     </ul>
     <div class="header-btn">
-      <a href="#" class="sign-up">Sign Up</a>
+      <a href="/ownersignup" class="sign-up">Sign Up</a>
       <a href="/ownersignin" class="sign-in">Sign In</a>
     </div>
   </header>

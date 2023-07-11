@@ -19,11 +19,12 @@ public class OwnerService {
 	@Autowired
 	private OwnerRepository ownerRepository;
 	
-	private List<Owners> owners = new ArrayList<>(Arrays.asList(
-			new Owners(1L, "Miraj Shrestha", "mirajshrestha10@gmail.com", "123456", "9845076998", null)
-			));
-	
+//	private List<Owners> owners = new ArrayList<>(Arrays.asList(
+//			new Owners(1L, "Miraj Shrestha", "mirajshrestha10@gmail.com", "123456", "9845076998", null)
+//			));
+//	
 	public void registerOwner(Owners owners) {
+		owners.setEnabled(false);
 		ownerRepository.save(owners);
 	}
 

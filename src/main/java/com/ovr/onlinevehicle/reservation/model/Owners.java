@@ -12,11 +12,13 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class Owners {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long owners_id;
 	private String fullname;
 	private String email;
 	private String password;
 	private String contact;
+	private boolean enabled;
 	
 	@OneToMany(mappedBy = "owners")
 	private Set<Vehicles> vehicle = new HashSet<>();
@@ -24,8 +26,8 @@ public class Owners {
 	public Owners() {
 		
 	}
-
-	public Owners(Long owners_id, String fullname, String email, String password, String contact,
+	
+	public Owners(Long owners_id, String fullname, String email, String password, String contact, boolean enabled,
 			Set<Vehicles> vehicle) {
 		super();
 		this.owners_id = owners_id;
@@ -33,6 +35,7 @@ public class Owners {
 		this.email = email;
 		this.password = password;
 		this.contact = contact;
+		this.enabled = enabled;
 		this.vehicle = vehicle;
 	}
 
@@ -84,6 +87,13 @@ public class Owners {
 		this.vehicle = vehicle;
 	}
 
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 	
 	
 }
